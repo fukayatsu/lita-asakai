@@ -3,10 +3,10 @@ Gem::Specification.new do |spec|
   spec.version       = "0.1.0"
   spec.authors       = ["fukayatsu"]
   spec.email         = ["fukayatsu@gmail.com"]
-  spec.description   = "TODO: Add a description"
-  spec.summary       = "TODO: Add a summary"
-  spec.homepage      = "TODO: Add a homepage"
-  spec.license       = "TODO: Add a license"
+  spec.description   = "Daily Standup Facilitator"
+  spec.summary       = "Daily Standup Facilitator"
+  spec.homepage      = "https://github.com/fukayatsu/lita-asakai"
+  spec.license       = "MIT"
   spec.metadata      = { "lita_plugin_type" => "handler" }
 
   spec.files         = `git ls-files`.split($/)
@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "lita", ">= 4.7"
+  spec.add_runtime_dependency "lita", ">= 4.0"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "pry-byebug"
