@@ -17,7 +17,7 @@ module Lita
         redis.del 'members'
         redis.rpush 'members', members[1..-1]
         response.reply "順番は #{members.join(' => ')} (今日のひとこと)"
-        response.reply "じゃあ #{members.first} から、前回やったこと」/「今日やること」/「気になってること」"
+        response.reply "じゃあ #{members.first} から、「前回やったこと」/「今日やること」/「気になってること」"
       end
 
       def next_member(response)
