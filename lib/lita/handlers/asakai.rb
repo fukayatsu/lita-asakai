@@ -1,3 +1,5 @@
+require 'securerandom'
+
 module Lita
   module Handlers
     class Asakai < Handler
@@ -11,8 +13,8 @@ module Lita
       }
 
       def start(response)
-        members = response.matches.flatten.first.scan(/@\S+/).shuffle
-        members << members.sample # for wrap up
+        members = response.matches.flatten.first.scan(/@\S+/).shuffle(random: SecureRandom)
+        members << members.sample(random: SecureRandom) # for wrap up
 
         redis.del 'members'
         redis.rpush 'members', members[1..-1]
